@@ -11,10 +11,6 @@ import {
   ArrowUpRight,
   ChevronRight,
   Star,
-  Award,
-  Users,
-  TrendingUp,
-  Zap,
   CheckCircle,
   ThumbsUp,
   Rocket,
@@ -130,7 +126,7 @@ export function ExpertiseSection(): ReactElement {
               <ServiceSelectionCard />
             </motion.div>
 
-            {/* Card 2: Enhanced 45% stat with viewport trigger */}
+            {/* Card 2: Enhanced pricing comparison with competitive advantage */}
             <motion.div variants={itemVariants} className="group">
               <div className="h-full rounded-lg border border-border bg-background/50 p-6 hover:border-primary/50 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-6 right-6">
@@ -148,108 +144,147 @@ export function ExpertiseSection(): ReactElement {
                     </motion.div>
                   </div>
 
-                  <ViewportTriggered45Percent />
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-primary">60% Less</h3>
+                    <p className="text-muted-foreground">than big tech companies like Google, Microsoft & Amazon</p>
 
-                  <p className="text-muted-foreground">of clients recommend us to other clients</p>
+                    <div className="bg-primary/10 rounded-lg p-4 space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">Big Tech Companies</span>
+                        <span className="text-sm font-semibold line-through text-red-400">£50K-£200K</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-semibold text-primary">GrabAI</span>
+                        <span className="text-lg font-bold text-primary">£20K-£80K</span>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Enhanced testimonial section */}
                   <div className="pt-2 pb-4">
                     <div className="flex items-start space-x-2">
                       <ThumbsUp className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                       <p className="text-xs text-muted-foreground italic">
-                        "Their expertise in web development and business systems transformed our operations completely."
+                        "GrabAI delivered the same quality as major tech companies at a fraction of the cost. Incredible
+                        value!"
                       </p>
                     </div>
-                  </div>
-
-                  {/* Multi-row company ticker */}
-                  <div className="relative h-16 overflow-hidden bg-gradient-to-r from-muted/5 via-muted/10 to-muted/5 rounded-md border border-border/30">
-                    <CompanyLogoTicker />
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.5 }}
-                      className="px-3 py-1.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full text-primary text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
-                    >
-                      <Award className="w-3 h-3" />
-                      <span className="font-medium">Client Satisfaction</span>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.7 }}
-                      className="px-3 py-1.5 bg-gradient-to-r from-gray-500/10 to-gray-500/5 border border-gray-500/20 rounded-full text-gray-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
-                    >
-                      <Users className="w-3 h-3" />
-                      <span className="font-medium">B2B Partners</span>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.9 }}
-                      className="px-3 py-1.5 bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-full text-emerald-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
-                    >
-                      <TrendingUp className="w-3 h-3" />
-                      <span className="font-medium">Growth Rate</span>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.1 }}
-                      className="px-3 py-1.5 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-full text-amber-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
-                    >
-                      <Zap className="w-3 h-3" />
-                      <span className="font-medium">Innovation</span>
-                    </motion.div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Card 3: GlassPatch with working video */}
+            {/* Card 3: GrabAI Innovation showcase with relevant image */}
             <motion.div variants={itemVariants} className="group">
               <div className="h-full rounded-lg border border-border bg-background/50 overflow-hidden hover:border-primary/50 transition-all duration-300 relative">
                 <div className="absolute top-6 right-6 z-10">
                   <ArrowUpRight className="w-5 h-5 text-white group-hover:text-primary transition-colors" />
                 </div>
 
-                <div className="absolute inset-0">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                    onLoadStart={(e) => {
-                      const video = e.target as HTMLVideoElement
-                      video.play().catch(() => {
-                        console.log("Video autoplay failed, user interaction required")
-                      })
-                    }}
-                  >
-                    <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4757%20%281%29.mp4-zuZGmYHOoQtajH4tuZKUVOr3qtbneV.mov" type="video/mp4" />
-                    <source src="/videos/glasspatch-demo.webm" type="video/webm" />
-                  </video>
-                  <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-emerald-500/10 to-primary/30">
+                  <div className="flex items-center justify-center h-full">
+                    <svg
+                      width="200"
+                      height="200"
+                      viewBox="0 0 200 200"
+                      className="opacity-30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      {/* AI Brain Network */}
+                      <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="2" className="text-primary" />
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="60"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        className="text-emerald-400"
+                      />
+                      <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="1" className="text-primary" />
+
+                      {/* Neural Network Nodes */}
+                      <circle cx="100" cy="60" r="4" fill="currentColor" className="text-primary" />
+                      <circle cx="130" cy="80" r="4" fill="currentColor" className="text-emerald-400" />
+                      <circle cx="140" cy="120" r="4" fill="currentColor" className="text-primary" />
+                      <circle cx="100" cy="140" r="4" fill="currentColor" className="text-emerald-400" />
+                      <circle cx="60" cy="120" r="4" fill="currentColor" className="text-primary" />
+                      <circle cx="70" cy="80" r="4" fill="currentColor" className="text-emerald-400" />
+
+                      {/* Connecting Lines */}
+                      <line
+                        x1="100"
+                        y1="60"
+                        x2="130"
+                        y2="80"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                      <line
+                        x1="130"
+                        y1="80"
+                        x2="140"
+                        y2="120"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                      <line
+                        x1="140"
+                        y1="120"
+                        x2="100"
+                        y2="140"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                      <line
+                        x1="100"
+                        y1="140"
+                        x2="60"
+                        y2="120"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                      <line
+                        x1="60"
+                        y1="120"
+                        x2="70"
+                        y2="80"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                      <line
+                        x1="70"
+                        y1="80"
+                        x2="100"
+                        y2="60"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        className="text-primary/50"
+                      />
+                    </svg>
+                  </div>
                 </div>
+                <div className="absolute inset-0 bg-black/50"></div>
 
                 <div className="relative z-10 p-6 h-full flex flex-col justify-between">
                   <div>
                     <Badge variant="outline" className="bg-background/20 text-white border-white/20 mb-4">
-                      GLASSPATCH
+                      GRABAІ INNOVATION
                     </Badge>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-white">
-                      $2M raised: the strategy behind Glass Patch's growth
+                      AI-Powered Solutions: The future of business automation
                     </h3>
                     <button className="text-primary flex items-center text-sm group-hover:underline">
                       <ChevronRight className="w-4 h-4 mr-1" />
-                      See case study
+                      Explore AI Solutions
                     </button>
                   </div>
                 </div>
@@ -748,20 +783,9 @@ function ServiceSelectionCard(): ReactElement {
 
   const questions = [
     {
-      id: "businessName",
-      question: "What's your business name?",
-      type: "input",
-      placeholder: "Enter your business name",
-    },
-    {
       id: "businessType",
       question: "What type of business do you have?",
       options: ["Startup", "Small Business", "Enterprise", "Non-Profit"],
-    },
-    {
-      id: "companySize",
-      question: "How many employees does your company have?",
-      options: ["1-10", "11-50", "51-200", "201+"],
     },
     {
       id: "goal",
@@ -771,29 +795,7 @@ function ServiceSelectionCard(): ReactElement {
     {
       id: "budget",
       question: "What's your budget range?",
-      options: ["$1K-$5K", "$5K-$15K", "$15K-$50K", "$50K+"],
-    },
-    {
-      id: "timeline",
-      question: "What's your timeline?",
-      options: ["ASAP", "1-3 Months", "3-6 Months", "6+ Months"],
-    },
-    {
-      id: "location",
-      question: "Where is your business located?",
-      options: ["North America", "Europe", "Asia", "Other"],
-    },
-    {
-      id: "contactName",
-      question: "Who is the primary contact for this project?",
-      type: "input",
-      placeholder: "Enter your full name",
-    },
-    {
-      id: "email",
-      question: "What's the best email to reach you?",
-      type: "input",
-      placeholder: "Enter your email address",
+      options: ["£2K-£8K", "£8K-£25K", "£25K-£80K", "£80K+"],
     },
   ]
 

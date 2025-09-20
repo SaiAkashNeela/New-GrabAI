@@ -49,13 +49,7 @@ export function NavBar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={scrollToTop}>
-            <Image
-              src="/images/weltivation-logo.png"
-              alt="Weltivation"
-              width={200}
-              height={50}
-              className="h-12 w-auto"
-            />
+            <Image src="/images/grabai-logo.png" alt="GrabAI" width={200} height={50} className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

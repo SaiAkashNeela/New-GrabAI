@@ -32,7 +32,8 @@ export default function ContactPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "Hello! I'm Weltivation's AI assistant. How can I help you with your project today?",
+      content:
+        "Hello! I'm GrabAI's intelligent assistant. How can I help you transform your business with our AI-powered solutions today?",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -56,12 +57,15 @@ export default function ContactPage() {
     // Advanced pricing responses
     if (lowerMessage.includes("price") || lowerMessage.includes("cost") || lowerMessage.includes("budget")) {
       if (lowerMessage.includes("web") || lowerMessage.includes("website")) {
-        return "For web development projects, our pricing typically ranges from $5,000 for basic websites to $50,000+ for complex enterprise applications. Factors affecting cost include: custom functionality, integrations, user authentication, payment processing, and scalability requirements. Would you like me to connect you with our team for a detailed quote based on your specific needs?"
+        return "For web development projects, our pricing typically ranges from £3,000 for basic websites to £40,000+ for complex enterprise applications. Factors affecting cost include: custom functionality, AI integrations, user authentication, payment processing, and scalability requirements. Would you like me to connect you with our team for a detailed quote based on your specific needs?"
       }
       if (lowerMessage.includes("mobile") || lowerMessage.includes("app")) {
-        return "Mobile app development costs vary significantly based on complexity. Simple apps start around $8,000, while feature-rich applications can reach $80,000+. Key factors include: platform choice (iOS/Android/both), custom UI/UX design, backend complexity, third-party integrations, and ongoing maintenance. I can schedule a technical consultation to provide accurate estimates for your project."
+        return "Mobile app development costs vary significantly based on complexity. Simple apps start around £5,000, while AI-powered applications can reach £60,000+. Key factors include: platform choice (iOS/Android/both), AI features, custom UI/UX design, backend complexity, third-party integrations, and ongoing maintenance. I can schedule a technical consultation to provide accurate estimates for your project."
       }
-      return "Our project costs are tailored to your specific requirements and business goals. We offer transparent pricing with detailed breakdowns covering development, testing, deployment, and support. Typical ranges: Basic projects ($5K-$15K), Medium complexity ($15K-$50K), Enterprise solutions ($50K+). Would you like to discuss your project requirements for a personalized quote?"
+      if (lowerMessage.includes("ai") || lowerMessage.includes("artificial intelligence")) {
+        return "Our AI solutions are competitively priced compared to big tech companies. Basic AI integrations start from £2,000, while enterprise AI systems range from £15,000-£100,000+. Unlike major corporations charging premium rates, we offer transparent pricing with no hidden costs. Our AI solutions deliver 3x better ROI than traditional approaches. Would you like a personalized quote?"
+      }
+      return "Our project costs are tailored to your specific requirements and business goals. We offer transparent pricing with detailed breakdowns covering development, testing, deployment, and support. Typical ranges: Basic projects (£3K-£12K), Medium complexity (£12K-£40K), Enterprise solutions (£40K+). Unlike big companies, we provide competitive rates with superior service. Would you like to discuss your project requirements for a personalized quote?"
     }
 
     // Technical expertise responses
@@ -75,7 +79,7 @@ export default function ContactPage() {
 
     // Project timeline responses
     if (lowerMessage.includes("time") || lowerMessage.includes("timeline") || lowerMessage.includes("deadline")) {
-      return "Project timelines depend on scope and complexity. Typical ranges: Simple websites (2-4 weeks), Custom web applications (6-12 weeks), Mobile apps (8-16 weeks), Enterprise solutions (12-24 weeks). We use agile methodology with weekly sprints, providing regular updates and early previews. For urgent projects, we offer expedited development with dedicated teams. When do you need your project completed?"
+      return "Project timelines depend on scope and complexity. Typical ranges: Simple websites (2-4 weeks), Custom web applications (6-12 weeks), Mobile apps (8-16 weeks), Enterprise solutions (12-24 weeks). We use agile methodology with continuous integration, automated testing, and regular client communication. Our process includes: discovery & planning, design & prototyping, development & testing, deployment & optimization, and ongoing support. We've successfully delivered 500+ projects with a 98% client satisfaction rate."
     }
 
     // Team and process responses
@@ -95,16 +99,16 @@ export default function ContactPage() {
       lowerMessage.includes("call") ||
       lowerMessage.includes("discuss")
     ) {
-      return "I'd be happy to schedule a free 30-minute technical consultation with our senior team. During this call, we'll: analyze your requirements, discuss technical approaches, provide timeline estimates, review similar projects, and answer all your questions. We can meet via video call, phone, or in-person at our San Francisco office. What's your preferred time and communication method?"
+      return "I'd be happy to schedule a free 30-minute technical consultation with our senior team. During this call, we'll: analyze your requirements, discuss technical approaches, provide timeline estimates, review similar projects, and answer all your questions. We can meet via video call, phone, or in-person at our London office. What's your preferred time and communication method?"
     }
 
     // General greeting responses
     if (lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("hey")) {
-      return "Hello! Welcome to Weltivation. I'm here to help you explore how we can transform your business through technology. Whether you're looking to build a web application, mobile app, implement AI solutions, or need technical consulting, I can provide detailed information and connect you with our expert team. What brings you here today?"
+      return "Hello! Welcome to GrabAI. I'm here to help you explore how we can transform your business through cutting-edge AI technology and digital solutions. Whether you're looking to build AI-powered applications, implement machine learning, develop websites, or need technical consulting, I can provide detailed information and connect you with our expert team. What brings you here today?"
     }
 
     // Default intelligent response
-    return "That's an excellent question! I'd love to provide you with detailed, personalized information. Our team of experts can address your specific needs and provide comprehensive solutions. You can reach our technical team directly at hello@weltivation.com, schedule a free consultation, or continue chatting with me for immediate assistance. What specific aspect of your project would you like to explore further?"
+    return "That's an excellent question! I'd love to provide you with detailed, personalized information. Our team of AI experts can address your specific needs and provide comprehensive solutions. You can reach our technical team directly at hello@grabai.co.uk, schedule a free consultation, or continue chatting with me for immediate assistance. What specific aspect of your project would you like to explore further?"
   }
 
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -139,21 +143,21 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@weltivation.com",
+      value: "hello@grabai.co.uk",
       description: "Send us an email anytime",
-      href: "mailto:hello@weltivation.com",
+      href: "mailto:hello@grabai.co.uk",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      description: "Mon-Fri from 8am to 6pm PST",
-      href: "tel:+15551234567",
+      value: "+44 20 7946 0958",
+      description: "Mon-Fri from 9am to 6pm GMT",
+      href: "tel:+442079460958",
     },
     {
       icon: MapPin,
       title: "Office",
-      value: "San Francisco, CA",
+      value: "London, UK",
       description: "Come say hello at our HQ",
       href: "#",
     },
@@ -232,7 +236,7 @@ export default function ContactPage() {
                     </motion.div>
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-1">
-                        <h3 className="text-xl font-bold">Weltivation AI Assistant</h3>
+                        <h3 className="text-xl font-bold">GrabAI Assistant</h3>
                         <motion.div
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}

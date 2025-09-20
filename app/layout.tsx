@@ -9,9 +9,10 @@ import { BusinessProfileHeader } from "@/components/business-profile-header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Weltivation - Transform Your Business",
-  description: "Revolutionary technology solutions that drive growth and innovation",
-    generator: 'v0.app'
+  title: "GrabAI - AI-Powered Business Solutions | www.grabai.co.uk",
+  description:
+    "Transform your business with cutting-edge AI solutions, web development, and digital innovation. Expert services from GrabAI - your trusted technology partner.",
+  generator: "v0.app",
 }
 
 export default function RootLayout({

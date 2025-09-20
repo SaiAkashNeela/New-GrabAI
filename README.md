@@ -1,8 +1,8 @@
-# welitvation
+# GrabAI
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sans-projects-d19e76e5/v0-welitvation)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sans-projects-d19e76e5/v0-grabai)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/Q9FBeY5mxTW)
 
 ## Overview
@@ -14,7 +14,7 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/sans-projects-d19e76e5/v0-welitvation](https://vercel.com/sans-projects-d19e76e5/v0-welitvation)**
+**[https://www.grabai.co.uk](https://www.grabai.co.uk)**
 
 ## Build your app
 
